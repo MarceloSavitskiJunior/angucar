@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: (--background-theme);}
+
+
+// variaveis css pra usar dentro do projeto
+
+:root {
+  --background-theme: #D0DDD7;
+  --primary-color: #8e1915;
+
+
+.light-mode {
+ --button-color: #D0DDD7;
+}
+
+.dark-mode {
+ --background-theme: #090909;
+ --button-color: #090909;
+}
+
+.p-button {
+  background-color: var(--button-color);
+}
+}
