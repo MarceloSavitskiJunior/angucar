@@ -1,4 +1,3 @@
-import { ThemeService } from './components/theme.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,7 +12,14 @@ import { HomeComponent } from './components/home/home.component';
 import { CarsComponent } from './components/cars/cars.component';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ToggleButtonModule } from 'primeng/togglebutton';
-import { ThemeToggleComponent } from './components/theme.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { SidebarModule } from 'primeng/sidebar';
+import { ThemeComponent } from './components/theme/theme.component';
+import {MatButtonModule} from '@angular/material/button';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { CarouselModule } from 'primeng/carousel';
+import { TagModule } from 'primeng/tag';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +27,8 @@ import { ThemeToggleComponent } from './components/theme.component';
     ToolbarComponent,
     HomeComponent,
     CarsComponent,
-    ThemeToggleComponent,
+    SidebarComponent,
+    ThemeComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +39,11 @@ import { ThemeToggleComponent } from './components/theme.component';
     InputSwitchModule,
     FormsModule,
     ToggleButtonModule,
+    SidebarModule,
+    MatButtonModule,
+    ProgressBarModule,
+    CarouselModule,
+    TagModule
   ],
   providers: [],
   bootstrap: [AppComponent]

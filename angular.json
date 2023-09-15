@@ -31,16 +31,7 @@
             ],
             "styles": [
               "src/styles.scss",
-                {
-                  "input": "src/app/theme-arya-orange.scss",
-                  "bundleName": "arya-orange",
-                  "inject": false
-                },
-                {
-                  "input": "src/app/theme-saga-orange.scss",
-                  "bundleName": "saga-orange",
-                  "inject": false
-                }
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -103,7 +94,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           }

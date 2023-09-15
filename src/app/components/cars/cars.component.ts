@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class CarsComponent {
 
+  carro = [
+    { nome: 'Celta', marca: 'Chevrolet', valor: 20000, image: '../../../assets/images/celtinha.jpg'},
+    { nome: 'TESTE', marca: 'teste', valor: 20423}
+  ]
 }

@@ -1,1 +1,18 @@
-<p>cars works!</p>
+<p-carousel [value]="carro" [numVisible]="1" [numScroll]="1" [circular]="true" autoPlayInterval="5000">
+  <ng-template let-carro pTemplate="item">
+      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+          <div class="mb-1">
+              <img src="../../../assets/images/{{carro.image }}" [alt]="carro.nome" class="w-1 shadow-2" />
+          </div>
+          <div>
+              <h4 class="mb-6">{{ carro.nome }}</h4>
+              <h6 class="mt-0 mb-3">{{ '$' + carro.valor }}</h6>
+              <p-tag [value]="carro.marca"></p-tag>
+              <div class="car-buttons mt-2">
+                  <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                  <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+              </div>
+          </div>
+      </div>
+  </ng-template>
+</p-carousel>

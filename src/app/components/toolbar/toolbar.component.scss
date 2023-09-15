@@ -1,6 +1,9 @@
 :host ::ng-deep {
+
   .p-toolbar {
-    background-color: var(--primary-color);
+    background-color: var(--background-theme);
+    border-color: var(--background-theme);
+    border-radius: 0;
   }
 }
 

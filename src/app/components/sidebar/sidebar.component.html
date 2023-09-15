@@ -1,0 +1,20 @@
+<p-sidebar [(visible)]="sidebarVisible">
+  <ng-template pTemplate="header">Look what we have for you!</ng-template>
+  <ng-template pTemplate="content">
+    <p-button (onClick)="redirecionarPara('/home')"
+              icon="pi pi-home"
+              label="Home"
+              [style]="{'background-color': 'var(--primary-color)'}"
+              ></p-button>
+    <br>
+    <p-button (onClick)="redirecionarPara('/cars')"
+              icon="pi pi-car"
+              label="Cars"
+              [style]="{'background-color': 'var(--primary-color)'}"
+              ></p-button>
+    <br>
+    <p-button (onClick)="redirecionarPara('/cars')" icon="pi pi-shopping-cart" label="Your cart" [style]="{'background-color': 'var(--primary-color)'}"></p-button>
+  </ng-template>
+  <ng-template pTemplate="footer">Footer Content</ng-template>
+</p-sidebar>
+<p-button (onClick)="sidebarVisible = !sidebarVisible" icon="pi pi-home" [style]="{'background-color': 'var(--primary-color)'}"></p-button>
