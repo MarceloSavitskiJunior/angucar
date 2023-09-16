@@ -8,6 +8,7 @@
 
 * {
   font-family: 'Merriweather', serif;
+  color: var(--font-color);
 }
 html, body { height: 100%; }
 body {
@@ -18,18 +19,38 @@ body {
 
   :root {
 
-    --background-theme: #D0DDD7;
-    --primary-color: #09ca70;
-    --border-button-color: #363537;
-
-    .dark-mode {
-    --background-theme: #090909;
-    --button-color: white;
-    --border-button-color: #D0DDD7;
+    .mat-app-background {
+      
+    background-color: var(--background-theme);
     }
 
+    --background-theme: #f2f2f2;
+    --primary-color: #09ca70;
+    --border-button-color: #f2f2f2;
+    --font-color: #363537;
+    --button-color: white;
+    --font-button-color: #ffffff;
+
     .p-button {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       background-color: var(--button-color);
       border-color: var(--border-button-color);
     }
+
+    .p-button:enabled:hover {
+      border-color: var(--primary-color);
+    }
+
+    .dark-mode {
+      --background-theme: #090909;
+      --button-color: rgb(8, 8, 8);
+      --border-button-color: #363537;
+      --font-color: #D0DDD7;
+      --font-button-color: #363537;
+  
+        .p-button {
+          background-color: var(--button-color);
+          border-color: var(--border-button-color);
+        }
+      }
   }

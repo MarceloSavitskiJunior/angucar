@@ -1,12 +1,120 @@
 :host ::ng-deep {
-  section {
-    width: 100%;
+  .page {
+    display: flex;
+    flex-direction: row; /* Alterei de 'column' para 'row' para dispor as seções lado a lado */
     height: 100vh;
+    overflow: hidden;
   }
+
+  .section-1 {
+    background-color: var(--background-theme) !important;
+    position: relative;
+  }
+
+  .poligono {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 
   .home {
+    color: var(--font-color);
+    background-color: var(--background-theme);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .apresentacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imagem {
+    border: 0.5px solid var(--border-button-color);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    max-width: 60%;
+    max-height: auto;
+  }
+
+  .sem-borda {
+    animation: flutuar 5s ease-in-out infinite;
+    animation-delay: 1s;
+    left: 50px;
+    max-width: 110%;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    z-index: 2;
+  }
+
+  .imagem-vertical {
+    border: 0.5px solid var(--border-button-color);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    width: 65%;
+    height: 30vh;
+  }
+  
+  .section-content {
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .section-content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .section-content p {
+    font-size: 16px;
+  }
+
+  .p-button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 32vw;
+  }
+
+  .p-dialog .p-dialog-header {
     background-color: var(--background-theme);
   }
+
+  .p-dialog .p-dialog-content {
+    background-color: var(--background-theme);
+  }
+
+  .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+    background-color: var(--primary-color);
+  }
+
+  @keyframes flutuar {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Altere a distância e a direção da flutuação conforme desejado */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
 }
-
-

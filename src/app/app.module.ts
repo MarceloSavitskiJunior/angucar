@@ -19,6 +19,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { CarouselModule } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
+import { DialogModule } from 'primeng/dialog';
+import { CardModule } from 'primeng/card';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @NgModule({
@@ -43,7 +46,10 @@ import { TagModule } from 'primeng/tag';
     MatButtonModule,
     ProgressBarModule,
     CarouselModule,
-    TagModule
+    TagModule,
+    DialogModule,
+    CardModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

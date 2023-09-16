@@ -1,3 +1,5 @@
-<p-toggleButton icon="pi pi-home"
-                [(ngModel)]="isDarkTheme"
-                (ngModelChange)="changeTheme($event)"></p-toggleButton>
+<p-toggleButton [(ngModel)]="isDarkTheme"
+                (ngModelChange)="changeTheme($event)"
+                onIcon="pi pi-sun"
+                offIcon="pi pi-moon"
+                [style]="{'background-color': 'var(--button-color)'}"></p-toggleButton>

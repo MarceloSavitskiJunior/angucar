@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cars',
@@ -6,9 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./cars.component.scss']
 })
 export class CarsComponent {
+  
+  marcas = [
+    { marca: 'Chevrolet', image: '../../../assets/images/marcas/chevrolet.jpg'},
+    { marca: 'BMW', image: '../../../assets/images/marcas/bmw-logo.jpg'},
+    { marca: 'Volkswagen', image: '../../../assets/images/marcas/volkswagen-logo.jpg'},
+    { marca: 'Subaru', image: '../../../assets/images/marcas/subaru-logo.jpg'},
+    { marca: 'Toyota', image: '../../../assets/images/marcas/toyota-logo.jpg'},
+    { marca: 'Fiat', image: '../../../assets/images/marcas/fiat-logo.jpg'},
 
-  carro = [
-    { nome: 'Celta', marca: 'Chevrolet', valor: 20000, image: '../../../assets/images/celtinha.jpg'},
-    { nome: 'TESTE', marca: 'teste', valor: 20423}
   ]
 }
