@@ -5,21 +5,24 @@
     </div>
     <p>Caso não queira procurar, você pode pesquisar pela marca que quer por aqui:</p>
     <br>
-    <span class="p-float-label" icon="pi pi-search">
+    <span class="p-float-label p-input-icon-left">
+        <i class="pi pi-search"></i>
         <input pInputText id="marca"/>
-        <label htmlFor="marca">Marca</label>
+        <label htmlFor="marca">Marca:</label>
     </span>
   </section>
 </div>
 
+<div class="card">
 <div class="car-catalog-container">
     <section class="car-catalog">
       <div class="car-card" *ngFor="let marcas of marcas">
         <img [src]="marcas.image" alt="{{ marcas.marca }}" />
         <h3>
-          <p-button label="Ver carros de {{ marcas.marca }}"></p-button>
+          <p-button [style]="{'width': '90%'}" label="Ver carros de {{ marcas.marca }}"></p-button>
         </h3>
       </div>
     </section>
   </div>
+</div>
   

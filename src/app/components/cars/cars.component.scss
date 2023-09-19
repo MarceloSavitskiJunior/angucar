@@ -1,20 +1,25 @@
 :host ::ng-deep {
+
+    .card {
+      background-color: var(--background-theme);
+    }
+
     .car-catalog-container {
-      padding: 20px; /* Espaçamento entre o container e as bordas da tela */
+      padding: 20px;
     }
   
     .car-catalog {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px; /* Espaçamento entre os cards */
-      justify-content: space-between; /* Distribui os cards uniformemente */
+      gap: 10px;
+      justify-content: space-between;
     }
   
     .car-card {
-      width: calc(33.33% - 10px); /* Reduzimos a largura e ajustamos o espaçamento */
+      width: calc(33.33% - 10px);
       background-color: #fff;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 5px; /* Reduzimos o padding interno */
+      padding: 5px;
       box-sizing: border-box;
       border-radius: 5px;
       text-align: center;
@@ -32,13 +37,13 @@
     }
   
     .car-card h3 {
-      font-size: 20px; /* Reduzimos ainda mais o tamanho do título */
+      font-size: 20px;
       margin-top: 5px;
       color: var(--font-color);
     }
   
     .car-card p {
-      font-size: 10px; /* Reduzimos ainda mais o tamanho do preço */
+      font-size: 10px;
       font-weight: bold;
       color: #007bff;
       margin-top: 5px;
@@ -51,7 +56,7 @@
 
       .page {
         display: flex;
-        flex-direction: row; /* Alterei de 'column' para 'row' para dispor as seções lado a lado */
+        flex-direction: row;
         height: 100vh;
         overflow: hidden;
       }
@@ -74,6 +79,18 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+      }
+
+      @media (max-width: 767px) {
+        .car-catalog {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .car-card {
+          width: 100%;
+          margin-bottom: 10px;
+        }
       }
   }
   
