@@ -22,6 +22,8 @@ import { TagModule } from 'primeng/tag';
 import { DialogModule } from 'primeng/dialog';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { InputTextModule } from 'primeng/inputtext';
     TagModule,
     DialogModule,
     CardModule,
-    InputTextModule
+    InputTextModule,
+    AutoCompleteModule,
+    MultiSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

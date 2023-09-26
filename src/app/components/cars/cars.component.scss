@@ -92,5 +92,38 @@
           margin-bottom: 10px;
         }
       }
+
+      .p-multiselect {
+        width: 58vw;
+        min-width: 58vw;
+    }
+
+    .p-checkbox .p-checkbox-box {
+      border: 2px solid var(--primary-color);
+      background: white;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .p-multiselect-panel .p-multiselect-items .p-multiselect-item {
+      color: #0e0e0f;
+    }
+
+    .p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight {
+      color: white;
+      background: #ffffff;
+    }
+
+    .p-multiselect:not(.p-disabled):hover {
+      border-color: var(--primary-color);
+    }
+
+    .p-multiselect:not(.p-disabled).p-focus {
+      outline: 0 none;
+      outline-offset: 0;
+      box-shadow: 0 0 0 0.2rem rgb(212, 211, 211);
+    }
   }
   

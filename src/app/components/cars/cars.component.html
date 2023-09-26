@@ -3,20 +3,24 @@
     <div class="apresentacao">
       <h1>Aqui estão as marcas mais aclamadas da nossa garagem!</h1>
     </div>
-    <p>Caso não queira procurar, você pode pesquisar pela marca que quer por aqui:</p>
+    <p>Pesquise pela marca que quer por aqui:</p>
     <br>
-    <span class="p-float-label p-input-icon-left">
-        <i class="pi pi-search"></i>
-        <input pInputText id="marca"/>
-        <label htmlFor="marca">Marca:</label>
-    </span>
+    <div class="card flex justify-content-center">
+      <p-multiSelect [options]="marcas" 
+                    [(ngModel)]="marcasSelected" 
+                    defaultLabel="Selecione a marca" 
+                    optionLabel="marca" 
+                    [filter]="false"
+                    selectedItemsLabel="{0} marcas filtras">
+      </p-multiSelect>
+    </div>
   </section>
 </div>
 
 <div class="card">
 <div class="car-catalog-container">
-    <section class="car-catalog">
-      <div class="car-card" *ngFor="let marcas of marcas">
+    <section *ngIf="marcasSelecionadas" class="car-catalog">
+      <div class="car-card" *ngFor="let marcas of marcasSelected">
         <img [src]="marcas.image" alt="{{ marcas.marca }}" />
         <h3>
           <p-button [style]="{'width': '90%'}" label="Ver carros de {{ marcas.marca }}"></p-button>
