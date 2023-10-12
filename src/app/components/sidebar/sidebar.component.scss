@@ -5,6 +5,7 @@
         border-color: var(--border-button-color);
         background-color: var(--primary-color);
         transition: 0.3s;
+        color: black !important;
     }
 
     .p-card .p-card-title {
@@ -14,6 +15,11 @@
 
     .p-card .p-card-content {
         padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--primary-color);
     }
 
 }
