@@ -1,0 +1,54 @@
+<div class="page">
+    <section class="home" id="carros">
+      <div class="apresentacao">
+        <p-carousel [value]="car" 
+                    [numVisible]="1" 
+                    [numScroll]="1"
+                    autoPlayInterval="5000"
+                    (onPage)="onPageChange($event)">
+          <ng-template let-car pTemplate="item">
+            <img src="../../../assets/images/carros/{{ car.image }}.jpg" class="imagem" alt="imagem de varios carros">
+            <div>
+              <br>
+              <h4 class="mb-6">{{ car.descricao }}</h4>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </div>
+    </section>
+  </div>
+  
+  <div class="page">
+    <section class="home" id="pecas">
+      <div class="section-content">
+        <h1>Peças...</h1>
+          <div class="apresentacao">
+           <p-carousel [value]="components" [numVisible]="1" [numScroll]="1" verticalViewPortHeight="360px" [circular]="true" autoPlayInterval="3000" orientation="vertical">
+            <ng-template let-components pTemplate="item">
+              <img src="../../../assets/images/pecas/{{ components.image }}.jpg" class="imagem-vertical" alt="imagem-vertical">
+              <div>
+                <br>
+                <h4 class="mb-6" [style]="{'color': 'var(--font-color)'}">{{ components.descricao }}</h4>
+              </div>
+            </ng-template>
+          </p-carousel>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <p-dialog header="Olá!" 
+            [(visible)]="visible" 
+            [modal]="true" 
+            [style]="{ width: '50vw' }" 
+            [draggable]="false" 
+            [resizable]="false"
+            [style]="{'color': 'var(--font-color)'}">
+    <p [style]="{'color': 'var(--font-color)'}">
+      Caso você tenha interesse em acessar o menu de carros, você pode clicar no botão abaixo, ou utilizar o botão no canto superior esquerdo da
+      página, indo até a página de carros!
+    </p>
+    <ng-template pTemplate="body">
+      <p-button icon="pi pi-check" [routerLink]="['/cars']" routerLinkActive="router-link-active" label="Quero ver os carros!" styleClass="p-button-text"></p-button>
+  </ng-template>
+  </p-dialog>

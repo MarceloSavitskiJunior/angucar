@@ -7,7 +7,7 @@
     <br>
     <div class="card flex justify-content-center">
       <p-multiSelect [options]="marcas" 
-                    [(ngModel)]="marcasSelected" 
+                    [(ngModel)]="marcasSelected"
                     defaultLabel="Selecione a marca" 
                     optionLabel="marca" 
                     [filter]="false"
@@ -20,10 +20,10 @@
 <div class="card">
 <div class="car-catalog-container">
     <section *ngIf="marcasSelecionadas" class="car-catalog">
-      <div class="car-card" *ngFor="let marcas of marcasSelected">
-        <img [src]="marcas.image" alt="{{ marcas.marca }}" />
+      <div class="car-card" *ngFor="let marca of marcasSelected">
+        <img [src]="marca.image" alt="{{ marca.marca }}" />
         <h3>
-          <p-button [style]="{'width': '90%'}" label="Ver carros de {{ marcas.marca }}"></p-button>
+          <p-button [style]="{'width': '90%'}" label="Ver carros de {{ marca.marca }}" (click)="navigateTo(marca.marca)"></p-button>
         </h3>
       </div>
     </section>

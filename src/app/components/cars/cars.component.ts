@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cars',
@@ -9,10 +10,13 @@ export class CarsComponent {
 
   marcasSelecionadas: boolean = true;
 
+  constructor(private router: Router) {
+
+  }
 
   marcas = [
     { marca: 'Chevrolet', image: '../../../assets/images/marcas/chevrolet.jpg' },
-    { marca: 'BMW', image: '../../../assets/images/marcas/bmw-logo.jpg' },
+    { marca: 'Bmw', image: '../../../assets/images/marcas/bmw-logo.jpg' },
     { marca: 'Volkswagen', image: '../../../assets/images/marcas/volkswagen-logo.jpg' },
     { marca: 'Subaru', image: '../../../assets/images/marcas/subaru-logo.png' },
     { marca: 'Toyota', image: '../../../assets/images/marcas/toyota-logo.jpg' },
@@ -22,5 +26,10 @@ export class CarsComponent {
 
   filtrar(): void {
     this.marcasSelecionadas = !this.marcasSelecionadas;
+  }
+
+  navigateTo(marca: string): void {
+    marca = marca.toLowerCase();
+    this.router.navigate(['cars', marca]);
   }
 }

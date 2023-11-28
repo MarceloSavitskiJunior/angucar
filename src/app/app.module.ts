@@ -24,6 +24,8 @@ import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { CarouselComponent } from './components/home/carousel/carousel.component';
+import { CamelCasePipe } from './camel-case.pipe';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { MultiSelectModule } from 'primeng/multiselect';
     CarsComponent,
     SidebarComponent,
     ThemeComponent,
+    CarouselComponent,
+    CamelCasePipe,
   ],
   imports: [
     BrowserModule,
