@@ -1,9 +1,17 @@
-
-
-<p>marca-selecionada works!</p>
-
-<div *ngFor="let carro of carros">
-    <p>{{ carro.nome }}</p>
-    <p>{{ carro.preco }}</p>
+<p-card *ngFor="let carro of carros">
+  <ng-template pTemplate="header">
+    <div class="header-content">
+      {{ carro.nome }} <br>
+      {{ carro.preco | decimalFormat:2:'R$' }}
+      <span class="header-button">
+        <p-button label="Comprar" icon="pi pi-car" (onClick)="abrirModalCompra()"></p-button>
+      </span>
+    </div>
+  </ng-template>
+  <div class="card-body">
+    <div class="imagem">
+      <img [src]="carro.image" class="img-fluid" alt="Imagem do carro">
+    </div>
   </div>
-
+  
+</p-card>
