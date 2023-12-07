@@ -26,6 +26,9 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CarouselComponent } from './components/home/carousel/carousel.component';
 import { CamelCasePipe } from './camel-case.pipe';
+import { ToastModule } from 'primeng/toast';
+import { ListaDeComprasComponent } from './components/lista-de-compras/lista-de-compras.component';
+import { TableModule } from 'primeng/table';
 
 
 @NgModule({
@@ -38,6 +41,7 @@ import { CamelCasePipe } from './camel-case.pipe';
     ThemeComponent,
     CarouselComponent,
     CamelCasePipe,
+    ListaDeComprasComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,9 @@ import { CamelCasePipe } from './camel-case.pipe';
     CardModule,
     InputTextModule,
     AutoCompleteModule,
-    MultiSelectModule
+    MultiSelectModule,
+    ToastModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

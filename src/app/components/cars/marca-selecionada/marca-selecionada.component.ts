@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MarcaSelecionadaService } from './marca-selecionada.service';
 import { Carro } from '../carro';
+import { MessageService } from 'primeng/api';
+import { ListaDeComprasService } from '../../lista-de-compras/lista-de-compras.service';
 
 @Component({
   selector: 'app-marca-selecionada',
@@ -16,7 +18,9 @@ export class MarcaSelecionadaComponent implements OnInit {
   ]
 
   constructor(private route: ActivatedRoute,
-              private marcaSelecionadaService: MarcaSelecionadaService) {}
+              private marcaSelecionadaService: MarcaSelecionadaService,
+              private messageService: MessageService,
+              private listaDeComprasService: ListaDeComprasService) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -28,8 +32,24 @@ export class MarcaSelecionadaComponent implements OnInit {
     });
   }
 
-  abrirModalCompra(): void {
-    alert("comprado!")
+  comprar(carro: Carro): void {
+    const listaDeCarros: Carro[] = this.listaDeComprasService.obterCarros();
+  
+    if (listaDeCarros.some(c => c.nome === carro.nome)) {
+      this.messageService.clear();
+      this.messageService.add({
+        severity: 'warn',
+        summary: 'Atenção!',
+        detail: `${carro.nome} já está na sua lista.`
+      });
+    } else {
+      this.listaDeComprasService.adicionarAoCarrinho(carro);
+      this.messageService.add({
+        severity: 'success',
+        summary: 'Sucesso!',
+        detail: `${carro.nome} comprado com sucesso.`
+      });
+    }
   }
-
+  
 }

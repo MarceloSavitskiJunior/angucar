@@ -1,0 +1,23 @@
+    .tela {
+        height: 100vh;
+        overflow: auto;
+    }
+  
+    .box-container {
+        width: 70%;
+        max-height: calc(100vh - 50px);
+        overflow-y: auto;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .imagem {
+        border: 2px solid var(--primary-color);
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        scale: 0.8;
+    }
+    
+    .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }

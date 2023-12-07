@@ -1,62 +1,46 @@
 :host ::ng-deep {
 
-    p-card {
-        display: flex;
-        flex-direction: column;
-        scale: 0.9;
-        margin: 10px auto;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    }
-  
-    .p-card .p-card-body {
-        padding: 1.25rem;
-        margin-bottom: 6vh;
-    }
+  .page {
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+  }
 
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-    }
-
-    .preco {
-        margin-bottom: 0.5rem;
-    }
-
-    .imagem {
-        display: flex;
-        justify-content: center;
-        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    }
-
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        font-weight: bold;
-        font-size: 25px;
-        background-color: var(--primary-color);
-        color: #363537;
-        border-color: #008c4b;
-      }
+  .home {
+    color: var(--font-color);
+    background-color: var(--background-theme);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
     
-      .header-button {
-        display: flex;
-        align-items: center;
-        margin-left: 2px;
-      }
+    .apresentacao {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    
+    .card {
+      width: 50%;
+      margin: 0 auto;
+    }
+    .p-button:enabled:hover {
+    border-color: var(--button-color);
+    background-color: var(--primary-color);
+    }
 
-      .p-button:enabled:hover {
-        border-color: var(--button-color);
-        background-color: var(--primary-color);
-      }
+    .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+      background-color: var(--primary-color);
+    }
 
-      @media screen and (min-width: 768px) {
-        p-card {
-            height: 600px;
-            width: 70vw;
+    @media screen and (max-width: 768px) {
+        .card {
+            scale: 1;
         }
     }
   }

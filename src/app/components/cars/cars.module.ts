@@ -7,6 +7,10 @@ import { MarcaSelecionadaService } from './marca-selecionada/marca-selecionada.s
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { DecimalFormatPipe } from 'src/app/decimal-format.pipe';
+import { ImageModule } from 'primeng/image';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -18,10 +22,14 @@ import { DecimalFormatPipe } from 'src/app/decimal-format.pipe';
     CarsRoutingModule,
     HttpClientModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    ImageModule,
+    ToastModule,
+    CarouselModule
   ],
   providers: [
-    MarcaSelecionadaService
+    MarcaSelecionadaService,
+    MessageService
   ]
 })
 export class CarsModule { }

@@ -1,7 +1,7 @@
 :host ::ng-deep {
   .page {
     display: flex;
-    flex-direction: row; /* Alterei de 'column' para 'row' para dispor as seções lado a lado */
+    flex-direction: row;
     height: 100vh;
     overflow: hidden;
   }
@@ -109,7 +109,7 @@
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px); /* Altere a distância e a direção da flutuação conforme desejado */
+      transform: translateY(-10px);
     }
     100% {
       transform: translateY(0);

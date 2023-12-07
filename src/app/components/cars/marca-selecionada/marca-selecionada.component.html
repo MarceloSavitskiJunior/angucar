@@ -1,17 +1,22 @@
-<p-card *ngFor="let carro of carros">
-  <ng-template pTemplate="header">
-    <div class="header-content">
-      {{ carro.nome }} <br>
-      {{ carro.preco | decimalFormat:2:'R$' }}
-      <span class="header-button">
-        <p-button label="Comprar" icon="pi pi-car" (onClick)="abrirModalCompra()"></p-button>
-      </span>
+<div class="page">
+  <p-toast></p-toast>
+  <section class="home" id="carros">
+    <div class="apresentacao">
+      <p-carousel [value]="carros" [numVisible]="1" [numScroll]="1" >
+        <ng-template let-carro pTemplate="item">
+          <p-card class="card" [header]="carro.nome">
+            <ng-template pTemplate="header">
+              <p-image [src]="carro.image" alt="Imagem do carro" class="imagem"></p-image>
+            </ng-template>
+            <ng-template pTemplate="content">
+                <div class="price">{{ carro.preco | currency: 'BRL' }}</div>
+                <div class="car-buttons">
+                <p-button label="Comprar" icon="pi pi-car" (click)="comprar(carro)"></p-button>
+              </div>
+          </ng-template>
+        </p-card>
+      </ng-template>
+      </p-carousel>
     </div>
-  </ng-template>
-  <div class="card-body">
-    <div class="imagem">
-      <img [src]="carro.image" class="img-fluid" alt="Imagem do carro">
-    </div>
-  </div>
-  
-</p-card>
+  </section>
+</div>

@@ -1,0 +1,29 @@
+<div class="tela">
+    <div class="box-container">
+        <p-table [value]="listaDeCompras" 
+                [tableStyle]="{ 'min-width': '50rem' }"
+                [paginator]="true"
+                [rows]="5"
+                [showCurrentPageReport]="true"
+                [tableStyle]="{ 'min-width': '50rem' }"
+                currentPageReportTemplate="Mostrando {first} até {last} de {totalRecords} produtos"
+                [rowsPerPageOptions]="[5, 10, 20]">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th id="carro">Carro</th>
+                    <th id="modelo" >Modelo</th>
+                    <th id="preco">Preço</th>
+                    <th id="status">Status</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-product>
+                <tr>
+                    <td style="width: 20px;"><img [src]="product.image" alt="{{product.nome}}" class="imagem"></td>
+                    <td>{{ product.nome }}</td>
+                    <td>{{ product.preco | currency: 'BRL' }}</td>
+                    <td><p-tag severity="warning" value="Em andamento!"></p-tag></td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
