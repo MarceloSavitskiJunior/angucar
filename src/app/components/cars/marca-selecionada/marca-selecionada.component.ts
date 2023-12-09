@@ -40,14 +40,14 @@ export class MarcaSelecionadaComponent implements OnInit {
       this.messageService.add({
         severity: 'warn',
         summary: 'Atenção!',
-        detail: `${carro.nome} já está na sua lista.`
+        detail: `${carro.nome} já está no seu carrinho.`
       });
     } else {
       this.listaDeComprasService.adicionarAoCarrinho(carro);
       this.messageService.add({
         severity: 'success',
         summary: 'Sucesso!',
-        detail: `${carro.nome} comprado com sucesso.`
+        detail: `${carro.nome} adicionado ao carrinho.`
       });
     }
   }

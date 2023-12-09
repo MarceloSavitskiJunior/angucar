@@ -6,7 +6,7 @@
                 [rows]="5"
                 [showCurrentPageReport]="true"
                 [tableStyle]="{ 'min-width': '50rem' }"
-                currentPageReportTemplate="Mostrando {first} até {last} de {totalRecords} produtos"
+                currentPageReportTemplate="{first} até {last} de {totalRecords} carros"
                 [rowsPerPageOptions]="[5, 10, 20]">
             <ng-template pTemplate="header">
                 <tr>
@@ -21,7 +21,7 @@
                     <td style="width: 20px;"><img [src]="product.image" alt="{{product.nome}}" class="imagem"></td>
                     <td>{{ product.nome }}</td>
                     <td>{{ product.preco | currency: 'BRL' }}</td>
-                    <td><p-tag severity="warning" value="Em andamento!"></p-tag></td>
+                    <td><p-tag severity="warning" value="No carrinho"></p-tag></td>
                 </tr>
             </ng-template>
         </p-table>
